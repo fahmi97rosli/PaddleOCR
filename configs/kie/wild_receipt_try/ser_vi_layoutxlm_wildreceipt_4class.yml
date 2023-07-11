@@ -83,7 +83,7 @@ Train:
       - VQASerTokenChunk:
           max_seq_len: *max_seq_len
       - Resize:
-          size: [1024, 512]
+          size: [224, 224]
       - NormalizeImage:
           scale: 1
           mean: [ 123.675, 116.28, 103.53 ]
@@ -120,7 +120,7 @@ Eval:
       - VQASerTokenChunk:
           max_seq_len: *max_seq_len
       - Resize:
-          size: [1024, 512]
+          size: [224, 224]
       - NormalizeImage:
           scale: 1
           mean: [ 123.675, 116.28, 103.53 ]
