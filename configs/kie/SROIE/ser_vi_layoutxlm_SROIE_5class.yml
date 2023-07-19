@@ -8,10 +8,10 @@ Global:
   # evaluation is run every 10 iterations after the 0th iteration
   eval_batch_step: [ 0, 19 ]
   cal_metric_during_train: False
-  save_inference_dir:
+  save_inference_dir: /content/PaddleOCR/inference/ser_vilayoutxlm_SROIE
   use_visualdl: False
   seed: 2022
-  infer_img: /train_data/wildreceipt/1.txt
+  infer_img: /content/PaddleOCR/train_data/wildreceipt/train_data/train244.jpg
   # if you want to predict using the groundtruth ocr info,
   # you can use the following config
   # infer_img: train_data/XFUND/zh_val/val.json
@@ -28,7 +28,7 @@ Architecture:
   Backbone:
     name: LayoutXLMForSer
     pretrained: True
-    checkpoints:
+    checkpoints: /content/PaddleOCR/trained_model/output/ser_vi_layoutxlm_SROIE/best_accuracy
     # one of base or vi
     mode: vi
     num_classes: &num_classes 11
